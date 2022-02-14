@@ -3,9 +3,14 @@ import json
 import datetime as dt
 from datetime import timedelta
 import pprint
+import os
+from dotenv import load_dotenv
 
-TEQUILA_ID="victoriakonoplevaflightsearch"
-TEQUILA_KEY="TbUUw1pGGC5TeXnw2wMZXTYsQqm5aNg-"
+load_dotenv()
+
+
+TEQUILA_ID=os.getenv('TEQUILA_ID')
+TEQUILA_KEY=os.getenv('TEQUILA_KEY')
 TEQUILA_ENDPOINT="https://tequila-api.kiwi.com/locations/query"
 TEQUILA_ENDPOINT_SEARCH="https://tequila-api.kiwi.com/v2/search"
 HEADERS={
